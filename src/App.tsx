@@ -1,5 +1,7 @@
+import { Suspense } from "react";
 import "./App.css";
 import type { CountriesType } from "./type";
+import Countries from "./components/Countries/Countries";
 
 // Step-1: Create a Promise to load Data
 const countriesPromise = async (): Promise<CountriesType[]> => {
@@ -12,6 +14,10 @@ function App() {
   return (
     <>
       <h2>World on the go...</h2>
+
+      <Suspense fallback = {<p>Loading...</p>}>
+        <Countries countriesPromise={countriesPromise()}/>
+      </Suspense>
     </>
   );
 }
