@@ -5,3 +5,17 @@
   padding: 20px;
   background-color: rgb(3, 156, 156);
 }
+
+
+.btn{
+  padding: 10px 25px;
+  background-color: rgb(31, 11, 106);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.country-visited {
+  background-color: rgb(122, 6, 231);
+}
